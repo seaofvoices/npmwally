@@ -1,0 +1,49 @@
+{
+  "name": "npmwally",
+  "version": "0.1.0",
+  "description": "A command line utility to convert Lua/Luau npm packages to wally packages",
+  "keywords": [
+    "luau",
+    "roblox",
+    "package",
+    "npm",
+    "yarn",
+    "lune",
+    "wally"
+  ],
+  "files": [
+    "src",
+    "main.js"
+  ],
+  "author": "jeparlefrancais <jeparlefrancais21@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seaofvoices/npmwally.git"
+  },
+  "homepage": "https://github.com/seaofvoices/npmwally#readme",
+  "license": "MIT",
+  "main": "src/index.js",
+  "bin": {
+    "npmwally": "main.js"
+  },
+  "scripts": {
+    "lint": "eslint main.js src/",
+    "format": "prettier . --write",
+    "style": "prettier . --check",
+    "npmwally": "node main.js"
+  },
+  "dependencies": {
+    "@npmcli/promise-spawn": "^8.0.0",
+    "commander": "^11.0.0",
+    "glob": "^11.0.0",
+    "ignore-walk": "^7.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.11.1",
+    "eslint": "^9.11.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.9.0",
+    "prettier": "3.3.3"
+  }
+}
