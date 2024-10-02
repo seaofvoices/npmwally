@@ -52,8 +52,19 @@ const getVersion = (specifiedVersion, dependencyName, workspaceMembers) => {
     : specifiedVersion
 }
 
+const convertAuthorToString = (author) => {
+  if (typeof author === 'string') {
+    return author
+  } else {
+    const { name = null, email = null, url = null } = author
+
+    return name + (email ? ` <${email}>` : '') + (url ? ` (${url})` : '')
+  }
+}
+
 module.exports = {
   removeNpmPackageScope,
   findWorkspaceMembers,
   getVersion,
+  convertAuthorToString,
 }

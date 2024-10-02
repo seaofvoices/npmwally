@@ -22,6 +22,7 @@ const {
   removeNpmPackageScope,
   findWorkspaceMembers,
   getVersion,
+  convertAuthorToString,
 } = require('./npm-package-utils')
 const {
   runDarklua,
@@ -191,7 +192,8 @@ const convertPackage = async (options) => {
     license: packageContent.license,
     author: [packageContent?.author]
       .concat(packageContent?.contributors ?? [])
-      .filter(Boolean),
+      .filter(Boolean)
+      .map(convertAuthorToString),
     dependencies: npmDependencies,
   })
 
