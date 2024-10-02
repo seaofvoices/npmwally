@@ -1,6 +1,6 @@
 {
   "name": "npmwally",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A command line utility to convert Lua/Luau npm packages to wally packages",
   "keywords": [
     "luau",

@@ -6,7 +6,7 @@ const log = require('./log')
 const { convertProject } = require('./convert-project')
 const fs = require('fs').promises
 
-const CLI_VERSION = '0.1.0'
+const CLI_VERSION = '0.1.1'
 
 const getLevelFilterFromVerbosity = (value) => {
   switch (value) {
